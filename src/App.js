@@ -11,7 +11,7 @@ function App() {
       {Data.filter(item => {
         if(searchTerm === ''){
           return item;
-        }else if (item.first_name.toLowerCase().includes(searchTerm.toLowerCase())){
+        }else if (item.first_name.toLowerCase().includes(searchTerm.toLowerCase()) || item.last_name.toLowerCase().includes(searchTerm.toLowerCase())){
           return item;
         }
       }).map((item, key) => {
